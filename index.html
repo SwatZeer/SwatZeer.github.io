@@ -1,27 +1,54 @@
+<!DOCTYPE html>
+<!--By Swat-->
 <html>
-<head>
-<meta http-equiv="refresh" content="600">
-<script>
-    function  Timer(){
-        var date = new Date();
-        document.getElementById("Calculate").innerHTML = date; 
-    }
-    setInterval("Timer();",250);
-</script> 
+    <head>
+        <meta http-equiv="refresh" content="600" charset="UTF-8">
+        <title>Swat's Mainpage</title>
+        <!-- Sakana Widget Link-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"> 
+        <!--Clock Script-->
+        <script>
+            function Timer(){
+                var date = new Date();
+                document.getElementById("Calculate").innerHTML = date;
+            }
+            setInterval("Timer();",250);
+        </script>
+        <!--Sakana Widget Script with Link-->
+        <script>
+            function initSakanaWidget() {
+                new SakanaWidget({character: 'chisato',controls: false, title: false}).setState({ t: 0.75, i: 0.005, s: 0.5, d: 1, t:0.5, w:0.1 }).mount('#sakana-widget');
+            }
+        </script>
+        <script
+        async
+        onload="initSakanaWidget()"
+        src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
+      ></script>
+    </head>
 
-<meta charset="UTF-8">
-<title>Swat's Page</title>
-<p>Swat's Test(划掉 Mainpage</p>
-<p> 很抱歉这地方没精装修! 真的不想搓页面了( </p>
-<p> 有修改建议请发送Issues/Requests 每周不定期修改. </p>
-<p> >>> This page only used for test. Do not use. </p>
-<p> ============================================================================================= </p>
-<p> 2017-2024 Aurora DevTeam. All rights reserved. </p>
-<p> By Swat_Zeer & Mecotwwz with love.</p>
-<p> [Aurora Services] 如果您有站点/服务等问题 请发邮件到 admin@swzs.cloud 谢谢! *请注明来意*
-<p> [Aurora MentalHealth Helping Services] 如有心理/精神问题 请联系 mt@swzs.cloud 谢谢! *由于服务特殊性 请您提供真实且完整的数据 谢谢*
-<p>下面丢一个时钟 懒得优化了</p>
-<head  onload = Timer()>
-<div id="Calculate">Loading...Please wait...
-</head>
+    <body>
+        <!-- Main -->
+        <p> Swat's Test Mainpage </p>
+        <p> 很抱歉这地方没精装修! 真的不想搓页面了( </p>
+        <p> 有新的点子/建议可以发 Issues/Requests or Admin Email 不定期修改. </p>
+        <p> &lt; 在想还能写些什么...也许会有更多的东西 &gt;</p>
+        <p> <b> ============================================================================================= </b> </p>
+        <p> 2017-2025 Aurora DevTeam. All rights reserved. </p>
+            By Swat_Zeer &amp; Mecotwwz with love.
+        <br> [Aurora Services] </br>
+        <p>如果您有<b>站点/服务</b>等问题 请发邮件到 admin@swzs.cloud 谢谢! *请注明来意*</p>
+        <p>如有<b>心理/精神</b>问题 请联系 mt@swzs.cloud 谢谢! *由于服务特殊性 请您提供真实且完整的数据 谢谢*</p>
+        <br>下面丢一个时钟 懒得优化了</br>
+        <!-- Clock -->    
+        <body onload = Timer()>
+        <div id="Calculate">Loading...Please wait...</div>
+        <p> <b> ============================================================================================== </b> </p>
+        <!-- Test Code Area-->
+        <p> >横线下面这地方一般是拿来测试用的...当然你玩玩也不是不行< </p>
+        <p> 整了一弹簧 (chisato 但是慢了点) </p>
+        <!-- Sakana Widget Chisato -->
+        <div id="sakana-set" style="position: fixed;top: 540px;left: 150px; z-index: 10;">
+        <div id="sakana-widget"></div>
+    </body>
 </html>
